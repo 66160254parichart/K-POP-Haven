@@ -1,0 +1,32 @@
+.body{
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ให้ body สูงเท่ากับ viewport */
+    margin: 0;
+    background-color: #f0f0f0;   
+}
+.container {
+    align-items: center;
+    text-align: center;
+    background-color: #a9ddfc;
+    padding: 20px;
+    border-radius: 10px;
+    width: 1000px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 250px;
+    
+}
+.howtoorder h1{
+    text-align: center;
+    font-size: 40px;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.howtoorder p{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}

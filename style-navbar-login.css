@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    background-color: #FF99C8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 150px;
+    height: auto;
+    margin-left: 20px;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+.nav-links a {
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-top: -10px;
+}
+.nav-links p{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: lighter;
+    margin-top: -10px;
+}
+.user-profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    padding: 10px;
+}
+.user-profile i {
+    font-size: 24px;
+    margin-right: 5px;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    min-width: 150px;
+    z-index: 100;
+}
+.dropdown-menu a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: block;
+    transition: 0.3s;
+}
+.dropdown-menu a:hover {
+    background: #f1f1f1;
+}
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+}
+.search-box {
+    display: flex;
+    background-color: #A9DEF9;
+    padding: 5px;
+    border-radius: 10px;
+    align-items: center;
+    width: 60%;
+    height: 55px;
+}
+.search-box input {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 5px;
+    flex: 1;
+    height: 30px;
+    margin-left: 10px;
+}
+.search {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+}
