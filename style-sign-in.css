@@ -82,6 +82,10 @@ h2 {
     font-weight: bold;
     cursor: pointer;
 }
+.sign-in-btn a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
 .sign-up-btn a{
     text-decoration: none;
     color: rgb(0, 0, 0);

@@ -65,14 +65,19 @@ body {
     z-index: 100;
 }
 .dropdown-menu a {
+    display: block;
+    padding: 10px;
     text-decoration: none;
     color: black;
-    padding: 10px;
-    display: block;
-    transition: 0.3s;
 }
+
+.dropdown-menu a:not(:last-child) {
+    border-bottom: 1px solid #ccc; /* เพิ่มเส้นคั่นด้านล่างให้กับทุกไอเท็มยกเว้นไอเท็มสุดท้าย */
+}
+
 .dropdown-menu a:hover {
-    background: #f1f1f1;
+    background-color: #f1f1f1; /* เพิ่มเอฟเฟกต์เมื่อเมาส์ชี้ */
+    border-radius: 10px;
 }
 .search-container {
     display: flex;
