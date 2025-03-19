@@ -1,27 +1,35 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     fetch("navbar-login.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("navbar-login").innerHTML = data;
-            attachUserProfileEvent(); // Attach event after loading navbar
-        })
-        .catch(error => console.error("Error loading navbar:", error));
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("navbar-login").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading footer:",error));
+    
 });
 
-function attachUserProfileEvent() {
-    const userProfile = document.getElementById("userProfile");
-    const dropdownMenu = userProfile.querySelector(".dropdown-menu");
 
-    userProfile.addEventListener("click", function (event) {
-        dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
-        event.stopPropagation();
+document.addEventListener('DOMContentLoaded', () => {
+    const shopMenuButton = document.getElementById('shop-menu-button');
+    const shopDropdown = document.getElementById('shop-dropdown');
+    const userMenuButton = document.getElementById('user-menu-button');
+    const userDropdown = document.getElementById('user-dropdown');
+
+    // Toggle dropdown visibility for Shop
+    shopMenuButton.addEventListener('click', (event) => {
+      event.stopPropagation(); // Prevent click from propagating to document
+      shopDropdown.classList.toggle('hidden');
     });
 
-    document.addEventListener("click", function () {
-        dropdownMenu.style.display = "none";
+    // Toggle dropdown visibility for User Profile
+    userMenuButton.addEventListener('click', (event) => {
+      event.stopPropagation(); // Prevent click from propagating to document
+      userDropdown.classList.toggle('hidden');
     });
 
-    dropdownMenu.addEventListener("click", function (event) {
-        event.stopPropagation();
+    // Close all dropdowns when clicking outside
+    document.addEventListener('click', () => {
+      shopDropdown.classList.add('hidden');
+      userDropdown.classList.add('hidden');
     });
-}
+  });

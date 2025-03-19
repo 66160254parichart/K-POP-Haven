@@ -8,20 +8,27 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("Error loading navbar:", error));
 });
 
-function attachUserProfileEvent() {
-    const userProfile = document.getElementById("userProfile");
-    const dropdownMenu = userProfile.querySelector(".dropdown-menu");
+document.addEventListener('DOMContentLoaded', () => {
+    const shopMenuButton = document.getElementById('shop-menu-button');
+    const shopDropdown = document.getElementById('shop-dropdown');
+    const userMenuButton = document.getElementById('user-menu-button');
+    const userDropdown = document.getElementById('user-dropdown');
 
-    userProfile.addEventListener("click", function (event) {
-        dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
-        event.stopPropagation();
+    // Toggle dropdown visibility for Shop
+    shopMenuButton.addEventListener('click', (event) => {
+      event.stopPropagation(); // Prevent click from propagating to document
+      shopDropdown.classList.toggle('hidden');
     });
 
-    document.addEventListener("click", function () {
-        dropdownMenu.style.display = "none";
+    // Toggle dropdown visibility for User Profile
+    userMenuButton.addEventListener('click', (event) => {
+      event.stopPropagation(); // Prevent click from propagating to document
+      userDropdown.classList.toggle('hidden');
     });
 
-    dropdownMenu.addEventListener("click", function (event) {
-        event.stopPropagation();
+    // Close all dropdowns when clicking outside
+    document.addEventListener('click', () => {
+      shopDropdown.classList.add('hidden');
+      userDropdown.classList.add('hidden');
     });
-}
+  });

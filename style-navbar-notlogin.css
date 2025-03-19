@@ -1,95 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-/*navbar*/        
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .navbar {
-            background-color: #FF99C8;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        .logo img {
-            width: 150px; /* Adjust the width as needed */
-            height: auto; /* Maintain aspect ratio */
-            margin-left: 20px;
-        }
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        .nav-links a {
-            font-size: 20px;
-            text-decoration: none;
-            color: rgb(255, 255, 255);
-            font-weight: bold;
-            margin-top: -10px;
-        }
-        .nav-links p{
-            font-size: 20px;
-            text-decoration: none;
-            color: rgb(255, 255, 255);
-            font-weight: lighter;
-            margin-top: -10px;
-        }
-        .SignIn-SignUp {
-            display: flex;
-            gap: 10px;
-            margin-top: center;
-            margin-right: 30px;
-            text-decoration: none;
-        }
-        .SignIn-SignUp a {
-            font-size: 20px;
-            text-decoration: none;
-            color: rgb(255, 253, 253);
-            font-weight: bold;
-            margin-top: 20px;
-        }
-        .SignIn-SignUp p {
-            font-size: 20px;
-            text-decoration: none;
-            color: rgb(255, 253, 253);
-            font-weight: lighter;
-            margin-top: 20px;
-        }
-        .search-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-            margin-top: -30px;
-        }
-        .search-box {
-            display: flex;
-            background-color: #A9DEF9;
-            padding: 5px;
-            border-radius: 10px;
-            align-items: center;
-            width: 60%;
-            height: 55px;
-        }
-        .search-box input {
-            background-color: #ffffff;
-            border: 20px;
-            border-radius: 10px;
-            outline: 20px;
-            padding: 5px;
-            flex: 1;
-            height: 30px;
-            margin-left: 10px;
-        }
-        .search {
-            width: 30px;
-            height: 30px;
-            padding: 5px;
-            cursor: pointer;
-            margin-top: center;
-            margin-left: center;
-        }
-        
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -15px;
+}
+.search-box {
+    display: flex;
+    background-color: #A9DEF9;
+    padding: 5px;
+    border-radius: 10px;
+    align-items: center;
+    width: 50%;
+    height: 55px;
+}
+.search-box input {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 5px;
+    flex: 1;
+    height: 30px;
+    margin-left: 10px;
+}
+.search {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+}
