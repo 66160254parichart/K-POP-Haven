@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-howtoorder.css">
+    <link rel="icon" href="image/logo.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <title>K-POP Haven</title>
+</head>
+<body>
+<nav class="mb-16">
+    <div id="navbar-notsearch-login"></div>
+    <script src="js/navbar-notsearch-login.js"></script>
+</nav>
+
+<div class="flex justify-center items-center">
+    <div class="w-full max-w-3xl bg-[#A9DEF9] p-6 rounded-xl shadow-lg flex justify-center">
+        <!-- Product Section -->
+        <div class="w-1/2 bg-[#FF99C8] p-4 rounded-xl">
+            <img src="image/Season's Greetings dream.jpg" class="w-full rounded-lg shadow-md">
+            <h2 class="text-lg font-bold text-center mt-3">Season's Greetings</h2>
+            <p class="text-sm text-center text-gray-600">NCT DREAM</p>
+            <p class="text-center font-semibold mt-2">Unit 1</p>
+        </div>
+
+        <!-- Review Section -->
+        <div class="w-1/2 bg-[#FF99C8] p-6 rounded-xl ml-4">
+            <h2 class="text-lg font-bold text-center">Review</h2>
+
+            <!-- Star Rating -->
+            <div class="flex justify-center my-3">
+                <span class="star text-3xl cursor-pointer" data-value="1">⭐</span>
+                <span class="star text-3xl cursor-pointer" data-value="2">⭐</span>
+                <span class="star text-3xl cursor-pointer" data-value="3">⭐</span>
+                <span class="star text-3xl cursor-pointer" data-value="4">⭐</span>
+                <span class="star text-3xl cursor-pointer" data-value="5">⭐</span>
+            </div>
+
+            <!-- Comment Box -->
+            <textarea class="w-full p-2 border rounded-md" placeholder="Comment"></textarea>
+
+            <!-- Upload Photo -->
+            <label class="block bg-white p-2 rounded-md text-gray-600 mt-3 cursor-pointer text-center">
+                <input type="file" class="hidden"> 📷 Add Photo
+            </label>
+
+            <!-- Buttons -->
+            <div class="flex space-x-2 mt-6">
+                <!-- ปุ่ม Cancel -->
+                <button 
+                    type="button" 
+                    class="flex-1 bg-[#FF0076] text-gray-800 font-bold py-2 rounded-lg hover:bg-[#FF73B3]" 
+                    onclick="goToHome()">
+                    Cancel
+                </button>
+
+                <!-- ปุ่ม Confirm -->
+                <button 
+                    type="button" 
+                    class="flex-1 bg-[#9AFFC1] text-gray-800 font-bold py-2 rounded-lg hover:bg-[#47F28A]" 
+                    onclick="goToReviewLogin()">
+                    Confirm
+                </button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+    // ฟังก์ชันสำหรับเปลี่ยนเส้นทางไปยังหน้า shipping.html
+    function goToHome() {
+        window.location.href = "home-login.html";
+    }
+
+    // ฟังก์ชันสำหรับเปลี่ยนเส้นทางไปยังหน้า review-login.html
+    function goToReviewLogin() {
+        window.location.href = "review-login.html";
+    }
+</script>
+
+<!--Footer-->
+<footer class="mt-16">
+    <div id="footer-login"></div>
+    <script src="js/footer-login.js"></script>
+</footer>
+</body>
+</html>

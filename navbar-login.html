@@ -14,74 +14,78 @@
 </head>
 
 <body>
-    <nav class="border-gray-200 bg-[#FF99C8]">
-        <div class="mr-[70px] flex items-center justify-between mx-auto p-4">
-          <!-- โลโก้ -->
-          <a href="#" class="ml-3 flex items-center">
-            <img src="image/logo.png" class="h-16" alt="Logo" />
-          </a>
-      
-          <!-- เมนู -->
-          <div class="hidden md:flex space-x-8">
-            <a href="#" class="py-1 px-1 text-white text-lg hover:text-gray-500">Home</a>
-            <a class="block py-1 px-1 text-white text-lg">|</a>
-  
-            <!-- Dropdown Shop -->
-            <div class="relative group">
-              <button id="shop-menu-button" class="py-1 px-1 text-white text-lg hover:text-gray-500 focus:outline-none">
-                Shop
-              </button>
-              <div id="shop-dropdown" class="absolute hidden group-hover:block bg-white text-gray-700 rounded-lg shadow-lg mt-2 w-40">
-                <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
-                  <img src="image/category1.png" alt="Category 1" class="w-5 h-5 mr-2">
-                  Category 1
-                </a>
-                <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
-                  <img src="image/category2.png" alt="Category 2" class="w-5 h-5 mr-2">
-                  Category 2
-                </a>
-                <a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100">
-                  <img src="image/category3.png" alt="Category 3" class="w-5 h-5 mr-2">
-                  Category 3
-                </a>
-              </div>
-            </div>
-  
-            <a class="block py-1 px-1 text-white text-lg">|</a>
-            <a href="#" class="py-1 px-1 text-white text-lg hover:text-gray-500">Pre-Order</a>
-            <a class="block py-1 px-1 text-white text-lg">|</a>
-            <a href="#" class="py-1 px-1 text-white text-lg hover:text-gray-500">News</a>
-          </div>
-      
-          <!-- โปรไฟล์ผู้ใช้ -->
-          <div class="flex items-center space-x-3">
-            <button type="button" class="flex text-sm bg-gray-800 rounded-full" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
-              <span class="sr-only">Open user menu</span>
-              <img class="w-[50px] h-[50px] rounded-full object-cover" src="image/userprofile.jpg" alt="user photo">
-            </button>
-            <span class="text-white text-lg font-medium">Prchx</span>
+   <nav class="border-gray-200 bg-[#FF99C8] ">
+      <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+        <!-- โลโก้ -->
+        <a href="home-login.html" class="flex items-center">
+          <img src="image/logo.png" class="h-16" alt="Logo" />
+        </a>
+    
+        <!-- เมนู -->
+        <div class="hidden md:flex space-x-8">
+          <a href="home-login.html" class="py-2 px-1 text-white text-lg hover:text-gray-500">Home</a>
+          <a class="block py-2 px-1 text-white text-lg">|</a>
+
+          <!-- Dropdown Shop -->
+        <div class="relative group">
+          <button id="shop-menu-button" class="py-2 px-1 text-white text-lg hover:text-gray-600 focus:outline-none">
+            Shop
+          </button>
+          <div id="shop-dropdown" class="absolute hidden group-hover:block z-50 bg-[#A9DEF9] text-black shadow-lg rounded-lg w-[200px] p-2">
+              <a href="shop-album.html" class="flex items-center px-4 py-2 text-sm hover:bg-gray-600 hover:text-white rounded-lg">
+                  <img src="image/typealbum.jpg" alt="Album" style="width: 48px; height: 48px; margin-right: 12px; border-radius: 50%; border: 3px solid #FF99C8; object-fit: cover;">
+                  Album
+              </a>
+              <a href="shop-lightstick.html" class="flex items-center px-4 py-2 text-sm hover:bg-gray-600 hover:text-white rounded-lg">
+                  <img src="image/typelightstick.jpg" alt="Light Stick" style="width: 48px; height: 48px; margin-right: 12px; border-radius: 50%; border: 3px solid #FF99C8; object-fit: cover;">
+                  Light Stick
+              </a>
+              <a href="shop-doll.html" class="flex items-center px-4 py-2 text-sm hover:bg-gray-600 hover:text-white rounded-lg">
+                  <img src="image/typedoll.jpg" alt="Doll" style="width: 48px; height: 48px; margin-right: 12px; border-radius: 50%; border: 3px solid #FF99C8; object-fit: cover;">
+                  Doll
+              </a>
+              <a href="shop-season.html" class="flex items-center px-4 py-2 text-sm hover:bg-gray-600 hover:text-white rounded-lg">
+                  <img src="image/typeseasonsgreeting.jpg" alt="Season's Greeting" style="width: 48px; height: 48px; margin-right: 12px; border-radius: 50%; border: 3px solid #FF99C8; object-fit: cover;">
+                  Season's Greeting
+              </a>
           </div>
         </div>
-      
-        <!-- Dropdown menu -->
-        <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-[#A9DEF9] dark:divide-gray-600" id="user-dropdown">
-          <div class="px-4 py-3">
-            <span class="block text-sm text-black dark:text-black">Prchx</span>
-          </div>
-          <ul class="py-2" aria-labelledby="user-menu-button">
-            <li>
-              <a href="#" class="block px-4 py-2 text-sm text-black hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-black dark:hover:text-white">
-                Shipping
-              </a>
-            </li>
-            <li>
-              <a href="#" class="block px-4 py-2 text-sm text-black hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-black dark:hover:text-white">
-                Logout
-              </a>
-            </li>
-          </ul>
+
+          <a class="block py-2 px-1 text-white text-lg">|</a>
+          <a href="album-pre.html" class="py-2 px-1 text-white text-lg hover:text-gray-500">Pre-Order</a>
+          <a class="block py-2 px-1 text-white text-lg">|</a>
+          <a href="news-login.html" class="py-2 px-1 text-white text-lg hover:text-gray-500">News</a>
         </div>
-      </nav>
+    
+        <!-- โปรไฟล์ผู้ใช้ -->
+        <div class="flex items-center space-x-3">
+          <button type="button" class="flex text-sm bg-gray-800 rounded-full" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+            <span class="sr-only">Open user menu</span>
+            <img class="w-[50px] h-[50px] rounded-full object-cover" src="image/userprofile.jpg" alt="user photo">
+          </button>
+          <span class="text-white text-lg font-medium">Prchx</span>
+        </div>
+      </div>
+    
+      <!-- Dropdown menu -->
+      <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-[#A9DEF9] dark:divide-gray-600" id="user-dropdown">
+        <div class="px-4 py-3">
+          <span class="block text-sm text-black dark:text-black">Prchx</span>
+        </div>
+        <ul class="py-2" aria-labelledby="user-menu-button">
+          <li>
+            <a href="shippingnavbar.html" class="block px-4 py-2 text-sm text-black hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-black dark:hover:text-white">
+              Shipping
+            </a>
+          </li>
+          <li>
+            <a href="home-notlogin.html" class="block px-4 py-2 text-sm text-black hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-black dark:hover:text-white">
+              Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <div class="search-container">
         <div class="search-box">

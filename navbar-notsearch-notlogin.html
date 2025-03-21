@@ -14,23 +14,32 @@
 </head>
 
 <body>
-    <nav class="border-gray-200 bg-[#FF99C8]">
-        <div class="mr-2  flex items-center justify-between mx-auto p-4">
-          <!-- โลโก้ -->
-          <a href="#" class="ml-3  items-center">
-            <img src="image/logo.png" class="h-16" alt="Logo" />
-          </a>
-      
-          <!-- เมนู -->
-          <div class="hidden md:flex space-x-8">
-            <a href="#" class="py-1 px-1 text-white text-lg hover:text-gray-500">Home</a>
-            <a class="block py-1 px-1 text-white text-lg">|</a>
-            <a href="#" class="py-1 px-1 text-white text-lg hover:text-gray-500">Shop</a>  
-            <a class="block py-1 px-1 text-white text-lg">|</a>
-            <a href="#" class="py-1 px-1 text-white text-lg hover:text-gray-500">Pre-Order</a>
-            <a class="block py-1 px-1 text-white text-lg">|</a>
-            <a href="#" class="py-1 px-1 text-white text-lg hover:text-gray-500">News</a>
-          </div>
+  <nav class="border-gray-200 bg-[#FF99C8]">
+    <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+      <!-- โลโก้ -->
+      <a href="home-notlogin.html" class="flex items-center">
+        <img src="image/logo.png" class="h-16" alt="Logo" />
+      </a>
+  
+      <!-- เมนู -->
+      <div class="hidden md:flex space-x-8">
+        <a href="home-notlogin.html" class="py-2 px-1 text-white text-lg hover:text-gray-500">Home</a>
+        <a class="block py-2 px-1 text-white text-lg">|</a>
+
+        <!-- Dropdown Shop -->
+        <div class="relative group">
+          <a href="sign-in.html">
+          <button id="shop-menu-button" class="py-2 px-1 text-white text-lg hover:text-gray-600 focus:outline-none">
+            Shop
+          </button>
+        </a>
+        </div>
+
+        <a class="block py-2 px-1 text-white text-lg">|</a>
+        <a href="sign-in.html" class="py-2 px-1 text-white text-lg hover:text-gray-500">Pre-Order</a>
+        <a class="block py-2 px-1 text-white text-lg">|</a>
+        <a href="news-notlogin.html" class="py-2 px-1 text-white text-lg hover:text-gray-500">News</a>
+      </div>
       
           <!-- โปรไฟล์ผู้ใช้ -->
           <div class=" items-center space-x-3 ">
@@ -41,5 +50,6 @@
         </div>
       
       </nav>
+    
 </body>
 </html>

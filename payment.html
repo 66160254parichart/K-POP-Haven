@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-howtoorder.css">
+    <link rel="icon" href="image/logo.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <title>K-POP Haven</title>
+</head>
+<body>
+<nav class="mb-16">
+    <div id="navbar-notsearch-login"></div>
+    <script src="js/navbar-notsearch-login.js"></script>
+</nav>
+
+<div class="bg-[#A9DEF9] p-6 rounded-lg flex flex-col md:flex-row w-full max-w-3xl shadow-lg mx-auto mt-6 mb-6">
+    <!-- Product Section -->
+    <div class=" w-full md:w-1/2 text-center p-4 mt-[40px]">
+        <div class="relative">
+            <img id="product-image" src="image/default-product.jpg" class="w-full h-[350px] object-cover rounded-lg" alt="Product">
+        </div>
+        <p id="product-title" class="font-bold text-lg mt-2">Default Product</p>
+        <p id="product-price" class="font-semibold text-pink-500">Price 0 ฿</p>
+    </div>
+
+    <!-- Address Form Section -->
+    <div class="w-full md:w-1/2 bg-pink-300 p-6 rounded-lg">
+        <h3 class="text-lg font-semibold text-gray-800">Address*</h3>
+        <form class="mt-3">
+            <input type="text" placeholder="Name - Surname" class="w-full p-2 rounded-lg border border-gray-300 mb-2">
+            <input type="text" placeholder="Address" class="w-full p-2 rounded-lg border border-gray-300 mb-2">
+            <input type="text" placeholder="Phone" class="w-full p-2 rounded-lg border border-gray-300 mb-2">
+
+            <!-- Payment Options -->
+            <div class="flex flex-col space-y-2 mb-4">
+                <!-- Bank 1 -->
+                <button type="button" class="flex items-center space-x-2 w-full p-3 bg-gray-100 hover:bg-pink-100 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink-500">
+                    <img src="image/bank-k+.jpg" class="w-8 h-8 rounded-full" alt="Bank 1">
+                    <span class="text-gray-700 text-sm flex-1 text-left">064-1844-055 (Jaemin N.)</span>
+                    <span class="text-pink-500 font-semibold">Select</span>
+                </button>
+
+                <!-- Bank 2 -->
+                <button type="button" class="flex items-center space-x-2 w-full p-3 bg-gray-100 hover:bg-pink-100 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink-500">
+                    <img src="image/bank-prompay.png" class="w-8 h-8 rounded-full" alt="Bank 2">
+                    <span class="text-gray-700 text-sm flex-1 text-left">127-127-127 (Jaemin N.)</span>
+                    <span class="text-pink-500 font-semibold">Select</span>
+                </button>
+            </div>
+
+            <div class="mb-3">
+                <label for="slip-upload" class="block text-gray-700 text-sm font-medium mb-2">Add Slip</label>
+                <div class="flex items-center space-x-2">
+                    <input type="file" id="slip-upload" accept="image/*" class="hidden">
+                    <label for="slip-upload" class="cursor-pointer bg-[#A9DEF9] text-black font-bold py-2 px-4 rounded-lg hover:bg-gray-300">
+                        Choose File
+                    </label>
+                    <span id="file-name" class="text-gray-600 text-sm">No file chosen</span>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex space-x-2">
+                <!-- ปุ่ม Cancel -->
+                <button 
+                    type="button" 
+                    class="flex-1 bg-[#FF0076] text-gray-800 font-bold py-2 rounded-lg hover:bg-[#FF73B3]" 
+                    onclick="goToHome()">
+                    Cancel
+                </button>
+
+                <!-- ปุ่ม Confirm -->
+                <button 
+                    type="button" 
+                    class="flex-1 bg-[#9AFFC1] text-gray-800 font-bold py-2 rounded-lg hover:bg-[#47F28A]" 
+                    onclick="confirmOrder()">
+                    Confirm
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--Footer-->
+<footer class="mt-16">
+    <div id="footer-login"></div>
+    <script src="js/footer-login.js"></script>
+</footer>
+
+<script>
+    // ดึงค่าพารามิเตอร์จาก URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const product = urlParams.get('product');
+
+    // อ้างอิงถึงองค์ประกอบ HTML
+    const productImage = document.querySelector('#product-image');
+    const productTitle = document.querySelector('#product-title');
+    const productPrice = document.querySelector('#product-price');
+
+    // เปลี่ยนข้อมูลสินค้าในหน้าชำระเงินตามสินค้าที่เลือก
+    //Album
+    if (product === 'wegoup') {
+        productImage.src = "image/album wegoup1.jpg";
+        productTitle.textContent = "Album WE GO UP";
+        productPrice.textContent = "Price 290 ฿";
+    } else if (product === 'walk') {
+        productImage.src = "image/album walk.jpg";
+        productTitle.textContent = "Album WALK";
+        productPrice.textContent = "Price 290 ฿";
+    } else if (product === 'spill-the-feels') {
+        productImage.src = "image/album spill the feels ver blue.png";
+        productTitle.textContent = "Album SPILL THE FEELS";
+        productPrice.textContent = "Price 290 ฿";
+    } else if (product === 'riize') {
+        productImage.src = "image/album riizing.jpg";
+        productTitle.textContent = "Album RIIZING";
+        productPrice.textContent = "Price 290 ฿";
+    } else if (product === 'phantom') {
+        productImage.src = "image/album phantom.webp";
+        productTitle.textContent = "Album PHANTOM";
+        productPrice.textContent = "Price 290 ฿";
+    } else if (product === 'wish') {
+        productImage.src = "image/album wish1.jpeg";
+        productTitle.textContent = "Album WHIS";
+        productPrice.textContent = "Price 290 ฿";
+    } 
+    //LightStick
+    else if (product === 'lightdream') {
+        productImage.src = "image/light dream.jpg";
+        productTitle.textContent = "Light Stick NCT DREAM";
+        productPrice.textContent = "Price 1350 ฿";
+    } else if (product === 'light127') {
+        productImage.src = "image/light 127.jpg";
+        productTitle.textContent = "Light Stick NCT 127";
+        productPrice.textContent = "Price 1350 ฿";
+    } else if (product === 'lightwish') {
+        productImage.src = "image/light wish.jpg";
+        productTitle.textContent = "Light Stick NCT WHIS";
+        productPrice.textContent = "Price 1350 ฿";
+    } else if (product === 'ligthwayv') {
+        productImage.src = "image/light wayv new.jpg";
+        productTitle.textContent = "Light Stick WAY V";
+        productPrice.textContent = "Price 1350 ฿";
+    } else if (product === 'lightriize') {
+        productImage.src = "image/light riize.jpg";
+        productTitle.textContent = "Light Stick RIIZE";
+        productPrice.textContent = "Price 1350 ฿";
+    } else if (product === 'lighseventeen') {
+        productImage.src = "image/light seventeen.jpg";
+        productTitle.textContent = "Light Stick SEVENTEEN";
+        productPrice.textContent = "Price 1350 ฿";
+    }
+
+    //Doll
+    else if (product === 'dolldream') {
+        productImage.src = "image/doll dream.webp";
+        productTitle.textContent = "Doll NCT DREAM";
+        productPrice.textContent = "Price 490 ฿";
+    } else if (product === 'doll127') {
+        productImage.src = "image/doll 127.webp";
+        productTitle.textContent = "Doll NCT 127";
+        productPrice.textContent = "Price 490 ฿";
+    } else if (product === 'dollwish') {
+        productImage.src = "image/doll wish1.jpg";
+        productTitle.textContent = "Doll NCT WHIS";
+        productPrice.textContent = "Price 490 ฿";
+    } else if (product === 'dollgot7') {
+        productImage.src = "image/doll got7.jpg";
+        productTitle.textContent = "Doll GOT7";
+        productPrice.textContent = "Price 490 ฿";
+    } else if (product === 'dollriize') {
+        productImage.src = "image/doll riize.jpg";
+        productTitle.textContent = "Doll RIIZE";
+        productPrice.textContent = "Price 490 ฿";
+    } else if (product === 'dollive') {
+        productImage.src = "image/doll ive.jpg";
+        productTitle.textContent = "Doll ive";
+        productPrice.textContent = "Price 490 ฿";
+    }
+
+    //season
+    else if (product === 'seasondream') {
+        productImage.src = "image/Season's Greetings dream.jpg";
+        productTitle.textContent = "Season's Greetings NCT DREAM";
+        productPrice.textContent = "Price 699 ฿";
+    }
+    else if (product === 'season127') {
+        productImage.src = "image/Season's Greetings 127.webp";
+        productTitle.textContent = "Season's Greetings NCT 127";
+        productPrice.textContent = "Price 699 ฿";
+    }
+    else if (product === 'seasonwayv') {
+        productImage.src = "image/Season's Greetings way v.jpg";
+        productTitle.textContent = "Season's Greetings WAY V";
+        productPrice.textContent = "Price 699 ฿";
+    }
+    else if (product === 'seasonseventeen') {
+        productImage.src = "image/Season's Greetings seventeen.jpg";
+        productTitle.textContent = "Season's Greetings SEVENTEEN";
+        productPrice.textContent = "Price 699 ฿";
+    }
+    else if (product === 'seasongirl') {
+        productImage.src = "image/Season's Greetings girl.webp";
+        productTitle.textContent = "Season's Greetings GIRLS’GENERATION";
+        productPrice.textContent = "Price 699 ฿";
+    }
+    else if (product === 'sessionred') {
+        productImage.src = "image/Season's Greetings red1.jpg";
+        productTitle.textContent = "Season's Greetings RIIZE";
+        productPrice.textContent = "Price 699 ฿";
+    }
+    
+   //pre
+else if (product === 'predream'){
+    productImage.src = "image/predream.webp";
+    productTitle.textContent = "Pre-Order Album DREAM SCAPE";
+    productPrice.textContent = "Price 390 ฿";
+}
+else if (product === 'pre127'){
+    productImage.src = "image/pre127.jpg";
+    productTitle.textContent = "Pre-Order Album Be There For Me";
+    productPrice.textContent = "Price 390 ฿";
+}
+else if (product === 'pregot7'){
+    productImage.src = "image/pregot7.jpg";
+    productTitle.textContent = "Pre-Order Album Present You";
+    productPrice.textContent = "Price 390 ฿";
+}
+else if (product === 'prekiss'){
+    productImage.src = "image/prekiss.webp";
+    productTitle.textContent = "Pre-Order Album Midas Touch";
+    productPrice.textContent = "Price 390 ฿";
+}
+else if (product === 'prered'){
+    productImage.src = "image/prered.webp";
+    productTitle.textContent = "Pre-Order Album Cosmic";
+    productPrice.textContent = "Price 390 ฿";
+}
+else if (product === 'pretxt'){
+    productImage.src = "image/pretxt.jpg";
+    productTitle.textContent = "Pre-Order Album THE DREAM ";
+    productPrice.textContent = "Price 390 ฿";
+}
+
+
+    else {
+        productImage.src = "image/default-product.jpg";
+        productTitle.textContent = "Unknown Product";
+        productPrice.textContent = "Price 0 ฿";
+    }
+
+    // ฟังก์ชันสำหรับเปลี่ยนเส้นทางไปยังหน้า home-login.html
+    function goToHome() {
+        window.location.href = "home-login.html";
+    }
+
+    // ฟังก์ชันสำหรับเปลี่ยนเส้นทางไปยังหน้า shipping.html
+    function confirmOrder() {
+        const product = new URLSearchParams(window.location.search).get('product');
+        const productImage = document.querySelector('#product-image').src;
+        const productTitle = document.querySelector('#product-title').textContent;
+        const productPrice = document.querySelector('#product-price').textContent;
+
+        // สร้าง URL Parameters
+        const orderDetails = {
+            product: product,
+            title: productTitle,
+            price: productPrice,
+            image: productImage
+        };
+        const queryString = new URLSearchParams(orderDetails).toString();
+
+        // เปลี่ยนเส้นทางไปยังหน้า shipping.html พร้อมส่งข้อมูลสินค้า
+        window.location.href = `shipping.html?${queryString}`;
+    }
+</script>
+</body>
+</html>
