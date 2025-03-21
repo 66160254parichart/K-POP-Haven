@@ -3,39 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style-howtoorder.css">
     <link rel="icon" href="image/logo.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
     <title>K-POP Haven</title>
 </head>
-<body>
-<nav>
-    <div id="navbar-notlogin"></div>
-    <script src="js/navbar-notsearch-notlogin.js"></script>
-</nav>
-
-<div class="container">
-    <div class="howtoorder">
-        <h1>How to order</h1>
-        <p>1. Select the items as desired</p>
-    <p>2. When you find a product you're interested in, click the 
-        <a href="#" class="button">
-            <img src="cart-icon.png" alt="Cart Icon"> 390.00 ฿
-        </a>
-    </p>
-    <p>3. When you click, the website will take you to the payment page.<br>
-       Then, fill in the information correctly, make the transfer, and upload the payment slip.</p>
-    <p>4. Once the information has been verified, click confirm.<br>
-       The website will then redirect you to the shipping page to check the delivery status.</p>
-    <p>5. After that, you can simply wait for your product to arrive!</p>
+<body class="flex flex-col items-center justify-center min-h-screen">
+    <nav class="w-full">
+        <div id="navbar-notlogin"></div>
+        <script src="js/navbar-notsearch-notlogin.js"></script>
+    </nav>
+    
+    <div class="bg-[#A9DEF9] p-8 rounded-lg w-full max-w-3xl text-center shadow-lg mt-8 mb-8">
+        <h1 class="text-3xl font-bold text-black mb-6">How to order</h1>
+        <p class="text-lg mb-4">1. Select the items as desired</p>
+        <p class="text-lg mb-4">2. When you find a product you're interested in, click the 🛒 290.00 ฿</p>
+        <p class="text-lg mb-4">3. When you click, the website will take you to the payment page.<br>Then, fill in the information correctly, make the transfer, and upload the payment slip.</p>
+        <p class="text-lg mb-4">4. Once the information has been verified, click confirm.<br>The website will then redirect you to the shipping page to check the delivery status.</p>
+        <p class="text-lg mb-4">5. After that, you can simply wait for your product to arrive!</p>
     </div>
-</div>
-
-<!--Footer-->
-<footer>
-    <div id="footer-notlogin"></div>
-    <script src="js/footer-notlogin.js"></script>
-</footer>
+    
+    <footer class="w-full">
+        <div id="footer-notlogin"></div>
+        <script src="js/footer-notlogin.js"></script>
+    </footer>
 </body>
 </html>

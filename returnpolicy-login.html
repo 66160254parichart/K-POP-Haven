@@ -3,68 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style-returnpolicy.css">
     <link rel="icon" href="image/logo.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
-    <title>K-POP Haven</title>
+    <title>Return Policy</title>
 </head>
-<body>
-<nav>
-    <div id="navbar-notsearch-login"></div>
-    <script src="js/navbar-notsearch-login.js"></script>
-</nav>
+<body class="flex flex-col items-center justify-center min-h-screen">
+    <nav class="w-full">
+        <div id="navbar-notsearch-login"></div>
+        <script src="js/navbar-notsearch-login.js"></script>
+    </nav>
 
-<div class="container">
-    <div class="title">
-        <h1>Return Policy</h1>
-    </div>
-    <div class="content">
-        <div class="left">
-            <h3>1. Conditions for Returns</h3>
-            <ul>
-                <li>Products damaged during transit (e.g., dented box, <br>broken items)</li>
-                <li>Wrong item received or does not match the order</li>
-                <li>Missing items or incomplete accessories</li>
-            </ul>
-            <h3>2. Non-returnable Products</h3>
-            <ul>
-                <li>Products that have been unsealed or used</li>
-                <li>Damage caused by the customer (e.g., tears, water damage)</li>
-                <li>Pre-order items, except in cases of seller error</li>
-            </ul>
-            <h3>3. Return Timeframe and Procedure</h3>
-            <ul>
-                <li>Request a return within 7 days, providing photos <br>and proof of purchase.</li>
-                <li>Contact customer service via [LINE / Email / Phone].</li>
-                <li>Wait for evaluation within 3 business days.</li>
-                <li>Customer error: The customer covers return shipping costs.</li>
-                <li>Seller error: The seller covers return shipping costs.</li>
-            </ul>
-        </div>
-        <div class="divider"></div>
-        <div class="right">
-            <h3>4. Refund/Exchange Options</h3>
-            <ul>
-                <li>Exchange for a new product (if in stock).</li>
-                <li>Full refund (if the product is out of stock).</li>
-                <li>Refund processed within 7 business days.</li>
-            </ul>
-            <h3>5. Disclaimer</h3>
-            <ul>
-                <li>The store reserves the right to deny returns <br>if conditions are not met.</li>
-            </ul>
-            <div class="image-container">
-                <img src="image/Return Policy.png" alt="Return Policy Image">
+    <div class="bg-[#A9DEF9] p-8 rounded-lg w-full max-w-4xl shadow-lg mt-8 mb-8">
+        <h1 class="text-2xl font-bold text-center mb-6">Return Policy</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-lg font-bold mb-2">1. Conditions for Returns</h3>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Products damaged during transit (e.g., dented box, broken items)</li>
+                    <li>Wrong item received or does not match the order</li>
+                    <li>Missing items or incomplete accessories</li>
+                </ul>
+                <h3 class="text-lg font-bold mb-2">2. Non-returnable Products</h3>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Products that have been unsealed or used</li>
+                    <li>Damage caused by the customer (e.g., tears, water damage)</li>
+                    <li>Pre-order items, except in cases of seller error</li>
+                </ul>
+                <h3 class="text-lg font-bold mb-2">3. Return Timeframe and Procedure</h3>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Request a return within 7 days, providing photos and proof of purchase.</li>
+                    <li>Contact customer service via [LINE / Email / Phone].</li>
+                    <li>Wait for evaluation within 3 business days.</li>
+                    <li>Customer error: The customer covers return shipping costs.</li>
+                    <li>Seller error: The seller covers return shipping costs.</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-2">4. Refund/Exchange Options</h3>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>Exchange for a new product (if in stock).</li>
+                    <li>Full refund (if the product is out of stock).</li>
+                    <li>Refund processed within 7 business days.</li>
+                </ul>
+                <h3 class="text-lg font-bold mb-2">5. Disclaimer</h3>
+                <ul class="list-disc pl-5 mb-4">
+                    <li>The store reserves the right to deny returns if conditions are not met.</li>
+                </ul>
+                <div class="mt-4">
+                    <img src="image/Return Policy.png" alt="Return Policy Image" class="w-full rounded-lg mt-16">
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!--Footer-->
-<footer>
-    <div id="footer-login"></div>
-    <script src="js/footer-login.js"></script>
-</footer>
+    <footer class="w-full">
+        <div id="footer-login"></div>
+        <script src="js/footer-login.js"></script>
+    </footer>
 </body>
 </html>
